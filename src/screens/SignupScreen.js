@@ -10,6 +10,7 @@ const SignupScreen = ({ navigation }) => {
   const { state, signup, clearErrorMessage } = useContext(AuthContext)
 
 
+
   return (
     <View style={styles.container}>
       <NavigationEvents
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    marginBottom: 200,
+    marginBottom: 250,
   }
 })
 
