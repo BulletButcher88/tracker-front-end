@@ -11,7 +11,6 @@ const Map = () => {
     return <ActivityIndicator size='large' style={{ marginTop: 200 }} />
   }
 
-
   return (
     <MapView
       style={styles.map}
@@ -20,7 +19,6 @@ const Map = () => {
         latitudeDelta: 0.05,
         longitudeDelta: 0.05
       }}
-
     >
       <Circle
         radius={20}
