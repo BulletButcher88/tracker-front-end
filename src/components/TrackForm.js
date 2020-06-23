@@ -6,8 +6,8 @@ import { Context as LocationContext } from '../context/LocationContext'
 const TrackFrom = () => {
   const { state: { name, recording, locations }, startRecording, stopRecording, changeName } = useContext(LocationContext)
 
+  console.log("location array length in TrackFrom", locations.length)
 
-  console.log(locations.length)
   return <>
     <Spacer>
       <Input
@@ -16,6 +16,7 @@ const TrackFrom = () => {
         onChangeText={changeName}
       />
     </Spacer>
+
     {recording ?
       <Button
         style={{
@@ -30,6 +31,7 @@ const TrackFrom = () => {
         onPress={startRecording}
       />
     }
+
   </>
 }
 
