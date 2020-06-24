@@ -6,7 +6,6 @@ import { Context as LocationContext } from '../context/LocationContext'
 const TrackFrom = () => {
   const { state: { name, recording, locations }, startRecording, stopRecording, changeName } = useContext(LocationContext)
 
-  console.log("location array length in TrackFrom", locations.length)
 
   return <>
     <Spacer>
@@ -31,7 +30,13 @@ const TrackFrom = () => {
         onPress={startRecording}
       />
     }
-
+    <Spacer>
+      {
+        !recording && locations.length
+          ? <Button title="Save Track" /> :
+          null
+      }
+    </Spacer>
   </>
 }
 
